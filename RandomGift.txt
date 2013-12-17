@@ -1,0 +1,67 @@
+== Config File ==
+debug: false
+commands:
+  "Fly Potion":
+    command: "flypotion {player} {amount}"
+    weight: 10
+    rand:
+      min: 1
+      max: 64
+  "Splash Fly Potion":
+    command: "flypotion {player} splash {amount}"
+    weight: 10
+    rand:
+      min: 1
+      max: 64
+items:
+  "Stone":
+    material: STONE
+    rand:
+     min: 64
+     max: INV
+  "Red Wool":
+    material: WOOL
+    data: RED
+    rand:
+      min: 64
+      max: INV
+  "Anvil":
+    material: ANVIL
+    amount: 1
+  enderchest:
+    material: ENDERCHEST
+    amount: 2
+multi:
+  "Diamond Armour Set":
+    helm:
+      type: item
+      material: DIAMOND_HELMET
+      amount: 1
+      ...
+
+
+== Requirements ==
+- Run by Buycraft (console), only gives player as argument
+- Must be weighted, ie chance of getting enderdragon skin extremely low
+- Item gifts
+  - Done through bukkit inventory methods
+  - Randomisation of stack amount (for some only), from 1 stack to an entire inventory
+  - Load data for items from config
+  -
+- Command gifts
+  - Run as if console ran it
+  - Commands will have blanks such as for player
+
+TODO: Allow INV on amount
+
+== Snippets ==
+getServer().dispatchCommand(getServer().getConsoleSender(), "command");
+
+for(int i=0; i<slots.size(); i++){
+    if(getInventory().getSlot(i) == null){
+        giveItem():
+    }
+}
+
+
+

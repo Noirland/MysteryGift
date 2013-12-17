@@ -6,8 +6,8 @@
 
     <groupId>nz.co.noirland</groupId>
     <artifactId>randomgift</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>RandomGift</name>
+    <version>1.0.2</version>
+    <name>MysteryGift</name>
 
     <repositories>
         <repository>
@@ -18,6 +18,10 @@
             <id>brynley-repo</id>
             <url>http://repo.arcadium.net.nz/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>vault-repo</id>
+            <url>http://ci.herocraftonline.com/plugin/repository/everything</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -25,6 +29,13 @@
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
             <version>1.7.2-R0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.milkbowl</groupId>
+            <artifactId>vault</artifactId>
+            <version>1.2.27</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
@@ -57,12 +68,12 @@
         <repository>
             <id>brynley-repo</id>
             <name>Releases</name>
-            <url>http://repo.brynley.tk/content/repositories/releases</url>
+            <url>http://repo.arcadium.net.nz/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
             <id>brynley-repo</id>
             <name>Snapshots</name>
-            <url>http://repo.brynley.tk/content/repositories/snapshots/</url>
+            <url>http://repo.arcadium.net.nz/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 

@@ -1,0 +1,23 @@
+author: ZephireNZ
+database: false
+main: nz.co.noirland.randomgift.MysteryGiftPlugin
+name: MysteryGift
+startup: postworld
+version: ${version}
+depend: [Vault]
+commands:
+    mysterygift:
+        description: Give a player a random gift.
+        usage: |
+           Usage:
+           /<command> [player]
+    mgreload:
+        description: Reload the MysteryGift plugin.
+
+permissions:
+    mysterygift.give:
+        description: Allows giving random gifts.
+        default: op
+    mysterygift.reload:
+        description: Ability to reload the configs.
+        default: op
