@@ -34,6 +34,7 @@ public class RandomGiftCollection {
     }
 
     public void clear() {
+        total = 0;
         map.clear();
     }
 }
