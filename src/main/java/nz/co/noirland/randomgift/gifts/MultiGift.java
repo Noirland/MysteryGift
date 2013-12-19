@@ -26,6 +26,7 @@ public class MultiGift extends Gift {
             gift.giveGift(player);
         }
         printMessage(player);
+        firework(player);
     }
 
     @Override

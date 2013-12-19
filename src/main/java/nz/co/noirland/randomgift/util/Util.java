@@ -170,6 +170,11 @@ public abstract class Util {
         return rand.nextInt((max - min) + 1) + min;
     }
 
+    public static <T> T randInArray(T[] array) {
+        int index = rand.nextInt(array.length);
+        return array[index];
+    }
+
     public static double roundUp(double x, double factor) {
         return factor * Math.ceil(x / factor);
     }

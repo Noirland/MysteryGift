@@ -20,6 +20,7 @@ public class PermGift extends Gift {
         }
         plugin.addPerm(player, perm);
         printMessage(player);
+        firework(player);
     }
 
     @Override

@@ -35,6 +35,7 @@ public class CommandGift extends Gift {
         comm = comm.replaceAll("\\{amount\\}", "" + amount);
         runCommand(comm);
         printMessage(player);
+        firework(player);
     }
 
     private void runCommand(String command) {

@@ -39,6 +39,7 @@ public class ItemGift extends Gift {
         }
         latestData = data;
         printMessage(player);
+        firework(player);
     }
 
     @Override
