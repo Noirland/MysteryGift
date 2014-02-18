@@ -114,24 +114,32 @@ public class PluginConfig extends Config {
     public ItemGift createItemGift(String name, ConfigurationSection section) {
         ItemGift gift;
 
-        String material = section.getString("material");
-        List<String> dataStr;
+        List<String> dataStr  = new ArrayList<String>();
+        List<String> materialStr = new ArrayList<String>();
+
+        if(section.isList("material")) {
+            materialStr = section.getStringList("material");
+        }else {
+            materialStr.add(section.getString("material"));
+        }
         if(section.isList("data")) {
             dataStr = section.getStringList("data");
         }else{
-            dataStr = new ArrayList<String>();
             dataStr.add(section.getString("data", ""));
         }
 
-        List<MaterialData> data = new ArrayList<MaterialData>();
-        for(String str : dataStr) {
-            data.add(Util.parseMaterialData(Material.getMaterial(material), str));
+        List<MaterialData> datas = new ArrayList<MaterialData>();
+        for(String material : materialStr) {
+            if(section.contains("damage")) {
+                datas.add(new MaterialData(Material.getMaterial(material), (byte) section.getInt("damage", 0)));
+                continue;
+            }
+            for(String data : dataStr) {
+                datas.add(Util.parseMaterialData(Material.getMaterial(material), data));
+            }
         }
-        if(section.contains("damage")) {
-            data.clear();
-            data.add(new MaterialData(Material.getMaterial(material), (byte) section.getInt("damage", 0)));
-        }
-        RandomMaterialData randData = new RandomMaterialData(data);
+
+        RandomMaterialData randData = new RandomMaterialData(datas);
 
         int min;
         int max;

@@ -6,17 +6,13 @@
 
     <groupId>nz.co.noirland</groupId>
     <artifactId>randomgift</artifactId>
-    <version>1.1.1</version>
+    <version>1.2</version>
     <name>MysteryGift</name>
 
     <repositories>
         <repository>
         <id>bukkit-repo</id>
         <url>http://repo.bukkit.org/content/groups/public</url>
-        </repository>
-        <repository>
-            <id>brynley-repo</id>
-            <url>http://repo.arcadium.net.nz/content/groups/public/</url>
         </repository>
         <repository>
             <id>vault-repo</id>
@@ -28,14 +24,14 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.7.2-R0.1-SNAPSHOT</version>
+            <version>LATEST</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>net.milkbowl</groupId>
-            <artifactId>vault</artifactId>
-            <version>1.2.27</version>
+            <groupId>net.milkbowl.vault</groupId>
+            <artifactId>Vault</artifactId>
+            <version>1.2.31</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
@@ -61,21 +57,4 @@
             </plugin>
         </plugins>
     </build>
-
-
-
-    <distributionManagement>
-        <repository>
-            <id>brynley-repo</id>
-            <name>Releases</name>
-            <url>http://repo.arcadium.net.nz/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>brynley-repo</id>
-            <name>Snapshots</name>
-            <url>http://repo.arcadium.net.nz/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
-
 </project>
