@@ -4,7 +4,7 @@ main: nz.co.noirland.randomgift.MysteryGiftPlugin
 name: MysteryGift
 startup: postworld
 version: ${version}
-depend: [Vault]
+depend: [Vault, ZephCore]
 commands:
     mysterygift:
         description: Give a player a random gift.

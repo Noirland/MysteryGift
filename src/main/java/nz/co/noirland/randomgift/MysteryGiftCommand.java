@@ -1,6 +1,6 @@
 package nz.co.noirland.randomgift;
 
-import nz.co.noirland.randomgift.util.Util;
+import nz.co.noirland.zephcore.Util;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -25,11 +25,11 @@ public class MysteryGiftCommand implements CommandExecutor {
             return false;
         }
         String pString = args[0];
-        if(!Util.isOnline(pString)) {
+        if(!Util.player(pString).isOnline()) {
             sender.sendMessage("Player is not online.");
             return true;
         }
-        Player player = plugin.getServer().getPlayer(pString);
+        Player player = Util.player(pString).getPlayer();
 
         plugin.giveGift(player);
         return true;
