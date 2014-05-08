@@ -1,5 +1,7 @@
 package nz.co.noirland.randomgift.util;
 
+import nz.co.noirland.zephcore.Util;
+
 public class RandomRange {
 
     public Integer min;

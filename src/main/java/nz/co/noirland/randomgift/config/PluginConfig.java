@@ -3,7 +3,7 @@ package nz.co.noirland.randomgift.config;
 import nz.co.noirland.randomgift.gifts.*;
 import nz.co.noirland.randomgift.util.RandomMaterialData;
 import nz.co.noirland.randomgift.util.RandomRange;
-import nz.co.noirland.randomgift.util.Util;
+import nz.co.noirland.zephcore.Util;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.material.MaterialData;

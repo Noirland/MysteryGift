@@ -1,8 +1,9 @@
 package nz.co.noirland.randomgift.gifts;
 
+import nz.co.noirland.randomgift.util.GiftUtil;
 import nz.co.noirland.randomgift.util.RandomMaterialData;
 import nz.co.noirland.randomgift.util.RandomRange;
-import nz.co.noirland.randomgift.util.Util;
+import nz.co.noirland.zephcore.Util;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.material.MaterialData;
@@ -27,7 +28,7 @@ public class ItemGift extends Gift {
 
         int rand = Util.randInt(range.min, range.max);
         if(range.round) {
-            rand = (int) Util.roundUp(rand, add.getMaxStackSize());
+            rand = (int) GiftUtil.roundUp(rand, add.getMaxStackSize());
         }
         amount = rand;
         add.setAmount(amount);
@@ -45,7 +46,7 @@ public class ItemGift extends Gift {
     @Override
     public void printMessage(Player player) {
         if(isChild) return;
-        String nameRepl = name.replaceAll("\\{data\\}", Util.stringCapitalize(Util.getMaterialName(latestData)));
+        String nameRepl = name.replaceAll("\\{data\\}", GiftUtil.stringCapitalize(Util.getMaterialName(latestData)));
         String amountStr = amount + "x ";
         if(range.round && latestData.getItemType().getMaxStackSize() > 1) {
             int stack = latestData.getItemType().getMaxStackSize();

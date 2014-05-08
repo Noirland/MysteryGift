@@ -2,7 +2,7 @@ package nz.co.noirland.randomgift.gifts;
 
 import nz.co.noirland.randomgift.MysteryGiftPlugin;
 import nz.co.noirland.randomgift.util.RandomRange;
-import nz.co.noirland.randomgift.util.Util;
+import nz.co.noirland.zephcore.Util;
 import org.bukkit.entity.Player;
 
 public class CommandGift extends Gift {
